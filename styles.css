@@ -1,0 +1,74 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #007bff !important;
+}
+
+.navbar a {
+    color: white !important;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/plane.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* Flight Search Box */
+.search-box {
+    text-align: center;
+    padding: 30px;
+}
+
+.search-box input {
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search-box button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Flight List Styling */
+.flight-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.flight-card img {
+    width: 80px;
+    height: auto;
+}
+
+.book-btn {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+}
