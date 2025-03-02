@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Flights - AirJet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">✈️ AirJet</a>
+    </nav>
+
+    <div class="container mt-4">
+        <h2>Available Flights</h2>
+        <div id="flight-list"></div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("backend/get_flights.php")
+                .then(response => response.json())
+                .then(data => {
+                    let flightList = document.getElementById("flight-list");
+                    data.forEach(flight => {
+                        flightList.innerHTML += `
+                            <div class="flight-card">
+                                <h4>${flight.airline}</h4>
+                                <p>Departure: ${flight.time}</p>
+                                <p>Price: ${flight.price}</p>
+                                <a href="booking.html?id=${flight.id}" class="book-btn">Book Now</a>
+                            </div>`;
+                    });
+                });
+        });
+    </script>
+
+</body>
+</html>
